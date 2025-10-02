@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 
 const SHEET_ID = "1yHdj1almgPF4q_pPpSx7qZjfC1LoA6UChjit60_khfg";
-const SHEET_NAME = "Mp";
+const SHEET_NAME = "UP WEST";
 const CSV_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&sheet=${encodeURIComponent(SHEET_NAME)}`;
 const REFRESH_INTERVAL_MS = 3000;
 const UNIT_DIVISOR = 7000;
@@ -10,7 +10,8 @@ function splitLines(text) {
   if (!text) return [];
   return text.replace(/
 /g, "
-").replace(//g, "
+").replace(/
+/g, "
 ").split("
 ");
 }
